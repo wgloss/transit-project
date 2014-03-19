@@ -21,6 +21,7 @@
 		BEE546D418CF82A400E82C7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE546B618CF82A400E82C7C /* UIKit.framework */; };
 		BEE546DC18CF82A400E82C7C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEE546DA18CF82A400E82C7C /* InfoPlist.strings */; };
 		BEE546DE18CF82A400E82C7C /* Transit_ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE546DD18CF82A400E82C7C /* Transit_ProjectTests.m */; };
+		BEE546E918D013FD00E82C7C /* transitTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE546E818D013FD00E82C7C /* transitTVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		BEE546D918CF82A400E82C7C /* Transit ProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Transit ProjectTests-Info.plist"; sourceTree = "<group>"; };
 		BEE546DB18CF82A400E82C7C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BEE546DD18CF82A400E82C7C /* Transit_ProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Transit_ProjectTests.m; sourceTree = "<group>"; };
+		BEE546E718D013FD00E82C7C /* transitTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = transitTVC.h; sourceTree = "<group>"; };
+		BEE546E818D013FD00E82C7C /* transitTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = transitTVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +115,9 @@
 		BEE546B818CF82A400E82C7C /* Transit Project */ = {
 			isa = PBXGroup;
 			children = (
-				BEE546C118CF82A400E82C7C /* transitVCAppDelegate.h */,
-				BEE546C218CF82A400E82C7C /* transitVCAppDelegate.m */,
 				BEE546C418CF82A400E82C7C /* Main.storyboard */,
+				BEE546E718D013FD00E82C7C /* transitTVC.h */,
+				BEE546E818D013FD00E82C7C /* transitTVC.m */,
 				BEE546C718CF82A400E82C7C /* transitVCViewController.h */,
 				BEE546C818CF82A400E82C7C /* transitVCViewController.m */,
 				BEE546CA18CF82A400E82C7C /* Images.xcassets */,
@@ -126,6 +129,8 @@
 		BEE546B918CF82A400E82C7C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BEE546C118CF82A400E82C7C /* transitVCAppDelegate.h */,
+				BEE546C218CF82A400E82C7C /* transitVCAppDelegate.m */,
 				BEE546BA18CF82A400E82C7C /* Transit Project-Info.plist */,
 				BEE546BB18CF82A400E82C7C /* InfoPlist.strings */,
 				BEE546BE18CF82A400E82C7C /* main.m */,
@@ -197,7 +202,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = transitVC;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Primal Coding";
 				TargetAttributes = {
 					BEE546CF18CF82A400E82C7C = {
@@ -251,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEE546BF18CF82A400E82C7C /* main.m in Sources */,
+				BEE546E918D013FD00E82C7C /* transitTVC.m in Sources */,
 				BEE546C918CF82A400E82C7C /* transitVCViewController.m in Sources */,
 				BEE546C318CF82A400E82C7C /* transitVCAppDelegate.m in Sources */,
 			);
@@ -306,7 +312,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -345,7 +350,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -403,7 +407,6 @@
 		BEE546E518CF82A400E82C7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Transit Project.app/Transit Project";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -426,7 +429,6 @@
 		BEE546E618CF82A400E82C7C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Transit Project.app/Transit Project";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -461,6 +463,7 @@
 				BEE546E318CF82A400E82C7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEE546E418CF82A400E82C7C /* Build configuration list for PBXNativeTarget "Transit ProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +472,7 @@
 				BEE546E618CF82A400E82C7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

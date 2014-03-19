@@ -14,11 +14,30 @@
 
 @implementation transitVCViewController
 
+
+
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self fetchData];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+- (void)fetchData{
+    NSURL *url = [NSURL URLWithString:@"http://proximobus.appspot.com/agencies/sf-muni/routes/N/stops.json"];
+    NSData *jsonResutls = [NSData dataWithContentsOfURL:url];
+    NSDictionary *propertyListResults = [NSJSONSerialization JSONObjectWithData:jsonResutls
+                                                                        options:0
+                                                                          error:NULL];
+    NSLog(@"propertylist = %@",propertyListResults);
+    NSArray *stops = [propertyListResults valueForKeyPath:@"items.id"];
+    NSLog(@"results= %@",stops);
+}
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
